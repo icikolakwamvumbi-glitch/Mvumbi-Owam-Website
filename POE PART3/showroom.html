@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showroom | Velora Motors</title>
+    <meta name="description" content="Browse the Velora Motors showroom: search, filter and sort sports cars, sedans, SUVs, convertibles and classic vehicles.">
+    <meta name="keywords" content="luxury car showroom, sports cars, SUVs, convertibles, classic cars">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0d0d0d">
+    <link rel="canonical" href="https://YOUR-SITE.netlify.app/showroom.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Showroom | Velora Motors">
+    <meta property="og:description" content="Browse the Velora Motors showroom.">
+    <meta property="og:image" content="https://YOUR-SITE.netlify.app/images/ferrari-296-gtb-1600.jpg">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/vehicles-data.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/showroom.js" defer></script>
+</head>
+<body>
+
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header>
+        <p class="brand"><a href="index.html">VELORA MOTORS</a></p>
+        <p class="tagline">Engineering Excellence, Delivered</p>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="showroom.html" aria-current="page">Showroom</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="heritage.html">Brand Heritage</a></li>
+                <li><a href="ownership.html">Ownership &amp; Financing</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+
+        <section class="page-title">
+            <h1>Our Showroom</h1>
+            <p>Search, filter and sort our collection of luxury and performance vehicles.</p>
+        </section>
+
+        <section class="section">
+            <div class="controls">
+                <p class="field">
+                    <label for="search">Search</label>
+                    <input type="text" id="search" placeholder="e.g. Ferrari, SUV...">
+                </p>
+                <p class="field">
+                    <label for="category">Category</label>
+                    <select id="category"><option value="all">All categories</option></select>
+                </p>
+                <p class="field">
+                    <label for="sort">Sort by</label>
+                    <select id="sort">
+                        <option value="name">Name (A-Z)</option>
+                        <option value="price-asc">Price: low to high</option>
+                        <option value="price-desc">Price: high to low</option>
+                    </select>
+                </p>
+            </div>
+            <p id="result-count" aria-live="polite"></p>
+            <div class="grid" id="vehicle-grid"></div>
+            <noscript><p>Please enable JavaScript to browse the showroom, or see our <a href="gallery.html">gallery</a>.</p></noscript>
+        </section>
+
+    </main>
+
+    <footer>
+        <p class="footer-brand">VELORA MOTORS</p>
+        <p><strong>Engineering Excellence, Delivered</strong></p>
+        <p>Luxury &amp; Performance Car Dealership</p>
+        <nav aria-label="Footer Navigation">
+            <a href="index.html">Home</a> |
+            <a href="showroom.html">Showroom</a> |
+            <a href="gallery.html">Gallery</a> |
+            <a href="about.html">About</a> |
+            <a href="heritage.html">Brand Heritage</a> |
+            <a href="ownership.html">Ownership &amp; Financing</a> |
+            <a href="enquiry.html">Enquiry</a> |
+            <a href="contact.html">Contact</a>
+        </nav>
+        <p class="copyright">&copy; 2026 Velora Motors. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
