@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Enquiry | Velora Motors</title>
+    <meta name="description" content="Enquire about a Velora Motors vehicle: get its price, availability or an indicative finance estimate instantly.">
+    <meta name="keywords" content="car enquiry, vehicle price, finance estimate, luxury car availability">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0d0d0d">
+    <link rel="canonical" href="https://YOUR-SITE.netlify.app/enquiry.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Vehicle Enquiry | Velora Motors">
+    <meta property="og:description" content="Get a price, availability or finance estimate.">
+    <meta property="og:image" content="https://YOUR-SITE.netlify.app/images/ferrari-296-gtb-1600.jpg">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/vehicles-data.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/validate.js" defer></script>
+    <script src="js/enquiry.js" defer></script>
+</head>
+<body>
+
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header>
+        <p class="brand"><a href="index.html">VELORA MOTORS</a></p>
+        <p class="tagline">Engineering Excellence, Delivered</p>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="showroom.html">Showroom</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="heritage.html">Brand Heritage</a></li>
+                <li><a href="ownership.html">Ownership &amp; Financing</a></li>
+                <li><a href="enquiry.html" aria-current="page">Enquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+
+        <section class="page-title">
+            <h1>Vehicle Enquiry</h1>
+            <p>Ask about a vehicle's price, availability or an indicative finance estimate. Your response appears instantly below the form.</p>
+        </section>
+
+        <section class="section">
+            <form id="enquiry-form" action="#" method="post" novalidate>
+                <fieldset>
+                    <legend>Enquire About a Vehicle</legend>
+
+                    <p class="field">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" autocomplete="name" required maxlength="60" data-validate="name" aria-describedby="name-error">
+                        <span class="error" id="name-error" role="alert"></span>
+                    </p>
+                    <p class="field">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required data-validate="email" aria-describedby="email-error">
+                        <span class="error" id="email-error" role="alert"></span>
+                    </p>
+                    <p class="field">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" autocomplete="tel" required data-validate="phone" placeholder="082 123 4567" aria-describedby="phone-error">
+                        <span class="error" id="phone-error" role="alert"></span>
+                    </p>
+                    <p class="field">
+                        <label for="vehicle">Vehicle</label>
+                        <select id="vehicle" name="vehicle" required aria-describedby="vehicle-error">
+                            <option value="">Select a vehicle</option>
+                        </select>
+                        <span class="error" id="vehicle-error" role="alert"></span>
+                    </p>
+                    <p class="field">
+                        <label for="enquiry-type">What would you like to know?</label>
+                        <select id="enquiry-type" name="enquiry-type" required>
+                            <option value="availability">Price and availability</option>
+                            <option value="finance">Finance estimate</option>
+                        </select>
+                    </p>
+
+                    <div id="finance-fields">
+                        <p class="field">
+                            <label for="deposit">Deposit (%)</label>
+                            <input type="number" id="deposit" name="deposit" value="10" min="0" max="90" step="1" data-validate="deposit" aria-describedby="deposit-error">
+                            <span class="error" id="deposit-error" role="alert"></span>
+                        </p>
+                        <p class="field">
+                            <label for="term">Finance term</label>
+                            <select id="term" name="term">
+                                <option value="36">36 months</option>
+                                <option value="48">48 months</option>
+                                <option value="60" selected>60 months</option>
+                                <option value="72">72 months</option>
+                            </select>
+                        </p>
+                    </div>
+
+                    <p class="field">
+                        <label for="viewing-date">Preferred viewing date (optional)</label>
+                        <input type="date" id="viewing-date" name="viewing-date" data-validate="date" aria-describedby="viewing-date-error">
+                        <span class="error" id="viewing-date-error" role="alert"></span>
+                    </p>
+                    <p class="field check">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent">I agree to be contacted about this enquiry.</label>
+                        <span class="error" id="consent-error" role="alert"></span>
+                    </p>
+                    <p>
+                        <button type="submit" class="btn btn-gold">Get My Response</button>
+                        <button type="reset" class="btn btn-outline">Clear Form</button>
+                    </p>
+                    <p id="form-status" role="status"></p>
+                </fieldset>
+            </form>
+
+            <div id="quote-result" class="result" tabindex="-1" hidden></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p class="footer-brand">VELORA MOTORS</p>
+        <p><strong>Engineering Excellence, Delivered</strong></p>
+        <p>Luxury &amp; Performance Car Dealership</p>
+        <nav aria-label="Footer Navigation">
+            <a href="index.html">Home</a> |
+            <a href="showroom.html">Showroom</a> |
+            <a href="gallery.html">Gallery</a> |
+            <a href="about.html">About</a> |
+            <a href="heritage.html">Brand Heritage</a> |
+            <a href="ownership.html">Ownership &amp; Financing</a> |
+            <a href="enquiry.html">Enquiry</a> |
+            <a href="contact.html">Contact</a>
+        </nav>
+        <p class="copyright">&copy; 2026 Velora Motors. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

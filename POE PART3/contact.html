@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Velora Motors</title>
+    <meta name="description" content="Contact Velora Motors to enquire about a vehicle, request a private viewing, or find our showroom on the map.">
+    <meta name="keywords" content="contact Velora Motors, private viewing, showroom location">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0d0d0d">
+    <link rel="canonical" href="https://YOUR-SITE.netlify.app/contact.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact | Velora Motors">
+    <meta property="og:description" content="Contact us or find our showroom.">
+    <meta property="og:image" content="https://YOUR-SITE.netlify.app/images/ferrari-296-gtb-1600.jpg">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/validate.js" defer></script>
+    <script src="js/contact.js" defer></script>
+    <script src="js/map.js" defer></script>
+</head>
+<body>
+
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header>
+        <p class="brand"><a href="index.html">VELORA MOTORS</a></p>
+        <p class="tagline">Engineering Excellence, Delivered</p>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="showroom.html">Showroom</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="heritage.html">Brand Heritage</a></li>
+                <li><a href="ownership.html">Ownership &amp; Financing</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+
+        <section class="page-title">
+            <h1>Contact Velora Motors</h1>
+            <p>Send us a message. Your details are compiled into an email that you can send straight from your email app.</p>
+        </section>
+
+        <section class="section">
+            <form id="contact-form" action="#" method="post" novalidate>
+                <fieldset>
+                    <legend>Send Us a Message</legend>
+
+                    <p class="field">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" autocomplete="name" required maxlength="60" data-validate="name" aria-describedby="name-error">
+                        <span class="error" id="name-error" role="alert"></span>
+                    </p>
+                    <p class="field">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required data-validate="email" aria-describedby="email-error">
+                        <span class="error" id="email-error" role="alert"></span>
+                    </p>
+                    <p class="field">
+                        <label for="phone">Phone Number (optional)</label>
+                        <input type="tel" id="phone" name="phone" autocomplete="tel" data-validate="phone" placeholder="082 123 4567" aria-describedby="phone-error">
+                        <span class="error" id="phone-error" role="alert"></span>
+                    </p>
+                    <p class="field">
+                        <label for="message-type">Type of Message</label>
+                        <select id="message-type" name="message-type" required aria-describedby="message-type-error">
+                            <option value="">Select a type</option>
+                            <option value="General enquiry">General enquiry</option>
+                            <option value="Private viewing">Private viewing</option>
+                            <option value="Trade-in">Trade-in</option>
+                            <option value="Feedback">Feedback</option>
+                            <option value="Partnership">Partnership</option>
+                        </select>
+                        <span class="error" id="message-type-error" role="alert"></span>
+                    </p>
+                    <p class="field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="8" required maxlength="500" data-validate="message" placeholder="Tell us how we can assist you..." aria-describedby="message-error message-count"></textarea>
+                        <span class="counter" id="message-count">0 / 500</span>
+                        <span class="error" id="message-error" role="alert"></span>
+                    </p>
+                    <p>
+                        <button type="submit" class="btn btn-gold">Prepare My Email</button>
+                        <button type="reset" class="btn btn-outline">Clear Form</button>
+                    </p>
+                </fieldset>
+            </form>
+
+            <div id="email-preview" class="result" tabindex="-1" hidden>
+                <h2>Your email is ready</h2>
+                <p>Check the details below, then press the button to open it in your email app.</p>
+                <pre id="email-text"></pre>
+                <p><a id="send-email" class="btn btn-gold" href="#">Send Email</a></p>
+            </div>
+        </section>
+
+        <section class="section alt reveal">
+            <h2>Find Us</h2>
+            <div id="map" role="region" aria-label="Map showing the Velora Motors showroom location"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p class="footer-brand">VELORA MOTORS</p>
+        <p><strong>Engineering Excellence, Delivered</strong></p>
+        <p>Luxury &amp; Performance Car Dealership</p>
+        <nav aria-label="Footer Navigation">
+            <a href="index.html">Home</a> |
+            <a href="showroom.html">Showroom</a> |
+            <a href="gallery.html">Gallery</a> |
+            <a href="about.html">About</a> |
+            <a href="heritage.html">Brand Heritage</a> |
+            <a href="ownership.html">Ownership &amp; Financing</a> |
+            <a href="enquiry.html">Enquiry</a> |
+            <a href="contact.html">Contact</a>
+        </nav>
+        <p class="copyright">&copy; 2026 Velora Motors. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

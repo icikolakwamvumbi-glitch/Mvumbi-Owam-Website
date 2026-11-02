@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Velora Motors</title>
+    <meta name="description" content="View the Velora Motors photo gallery of luxury and performance vehicles, with a full-screen lightbox viewer.">
+    <meta name="keywords" content="luxury car gallery, Ferrari photos, Rolls-Royce photos, supercar images">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0d0d0d">
+    <link rel="canonical" href="https://YOUR-SITE.netlify.app/gallery.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Gallery | Velora Motors">
+    <meta property="og:description" content="Photo gallery of our luxury and performance vehicles.">
+    <meta property="og:image" content="https://YOUR-SITE.netlify.app/images/ferrari-296-gtb-1600.jpg">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/lightbox.js" defer></script>
+</head>
+<body>
+
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header>
+        <p class="brand"><a href="index.html">VELORA MOTORS</a></p>
+        <p class="tagline">Engineering Excellence, Delivered</p>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="showroom.html">Showroom</a></li>
+                <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="heritage.html">Brand Heritage</a></li>
+                <li><a href="ownership.html">Ownership &amp; Financing</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+
+        <section class="page-title">
+            <h1>Vehicle Gallery</h1>
+            <p>Select any photo to view it larger. Use the arrow keys to move between vehicles and Esc to close.</p>
+        </section>
+
+        <section class="section">
+            <ul class="gallery">
+                <li><a href="images/ferrari-296-gtb-1600.jpg" data-caption="Ferrari 296 GTB"><img src="images/ferrari-296-gtb-800.jpg" width="800" height="533" alt="Ferrari 296 GTB"></a></li>
+                <li><a href="images/lamborghini-huracan-1600.jpg" data-caption="Lamborghini Huracan"><img class="img-bottom" src="images/lamborghini-huracan-800.jpg" width="800" height="533" alt="Lamborghini Huracan" loading="lazy"></a></li>
+                <li><a href="images/rolls-royce-ghost-1600.jpg" data-caption="Rolls-Royce Ghost"><img src="images/rolls-royce-ghost-800.jpg" width="800" height="533" alt="Rolls-Royce Ghost" loading="lazy"></a></li>
+                <li><a href="images/bentley-bentayga-1600.jpg" data-caption="Bentley Bentayga"><img src="images/bentley-bentayga-800.jpg" width="800" height="533" alt="Bentley Bentayga" loading="lazy"></a></li>
+                <li><a href="images/range-rover-autobiography-1600.jpg" data-caption="Range Rover Autobiography"><img src="images/range-rover-autobiography-800.jpg" width="800" height="533" alt="Range Rover Autobiography" loading="lazy"></a></li>
+                <li><a href="images/aston-martin-db12-volante-1600.jpg" data-caption="Aston Martin DB12 Volante"><img src="images/aston-martin-db12-volante-800.jpg" width="800" height="533" alt="Aston Martin DB12 Volante" loading="lazy"></a></li>
+                <li><a href="images/jaguar-e-type-1600.jpg" data-caption="Restored Jaguar E-Type"><img src="images/jaguar-e-type-800.jpg" width="800" height="533" alt="Restored Jaguar E-Type" loading="lazy"></a></li>
+            </ul>
+        </section>
+
+        <dialog id="lightbox" aria-label="Image viewer">
+            <figure>
+                <img src="" alt="">
+                <figcaption></figcaption>
+            </figure>
+            <button type="button" class="lb-btn lb-close" aria-label="Close">&times;</button>
+            <button type="button" class="lb-btn lb-prev" aria-label="Previous image">&#8249;</button>
+            <button type="button" class="lb-btn lb-next" aria-label="Next image">&#8250;</button>
+        </dialog>
+
+    </main>
+
+    <footer>
+        <p class="footer-brand">VELORA MOTORS</p>
+        <p><strong>Engineering Excellence, Delivered</strong></p>
+        <p>Luxury &amp; Performance Car Dealership</p>
+        <nav aria-label="Footer Navigation">
+            <a href="index.html">Home</a> |
+            <a href="showroom.html">Showroom</a> |
+            <a href="gallery.html">Gallery</a> |
+            <a href="about.html">About</a> |
+            <a href="heritage.html">Brand Heritage</a> |
+            <a href="ownership.html">Ownership &amp; Financing</a> |
+            <a href="enquiry.html">Enquiry</a> |
+            <a href="contact.html">Contact</a>
+        </nav>
+        <p class="copyright">&copy; 2026 Velora Motors. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
